@@ -5,7 +5,6 @@ A collaborative **Learning Management System (LMS)** web project built by **Zees
 This project focuses on **frontend and backend integration**, **user authentication**, and **course management** features.
 
 ---
-
 ## Our Goals
 - Strengthen our **HTML, CSS, JavaScript** skills  
 - Implement **PHP / Node.js** for backend logic  
