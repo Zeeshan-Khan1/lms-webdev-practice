@@ -47,3 +47,4 @@ This project focuses on **frontend and backend integration**, **user authenticat
    
 ## Our Vision
 Build a clean, responsive, and fully functional LMS system that reflects teamwork, creativity, and technical skills — ready for competition!
+Includes analytics and real-time progress tracking to measure learning outcomes and drive continuous improvement.
