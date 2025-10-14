@@ -36,8 +36,8 @@ This project focuses on **frontend and backend integration**, **user authenticat
 | Name | Role |
 |------|------|
 | **Zeeshan Khan** | Full-Stack Developer |
-| **Aiza** | Frontend Developer |
-| **Ethsham** | Backend Developer |
+| **Aiza Dawood** | Frontend Developer |
+| **Ehtisham Tasadduq** | Backend Developer |
 
 ---
 
