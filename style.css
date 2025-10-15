@@ -1,0 +1,92 @@
+
+    body {
+      background-color: #f5f5f5;
+      margin-bottom: 80px; /* Space for sticky footer */
+    }
+
+    .sidebar {
+      background-color: #ffffff;
+      min-height: 100vh;
+      padding: 20px 10px;
+      border-right: 1px solid #eee;
+    }
+
+.logo-1 {
+  max-width:100%;
+  height:auto;
+  width:80px;
+  border-radius: 10px;
+  border: 2px solid #ddd; 
+  /* optional, for a clean frame */
+}
+
+.user-info h5 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.user-info small {
+  color: #777;
+  font-size: 0.9rem;
+}
+   .sidebar .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #333;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: #f0f0f0;
+      border-radius: 6px;
+    }
+
+    .card-custom {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+
+    .topbar {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .footer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1c1c2c;
+      color: white;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .footer-bar button {
+      background-color: #ffffff;
+      color: #1c1c2c;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .project-dot {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .offcanvas-start {
+      width: 250px;
+    }
