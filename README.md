@@ -3,7 +3,6 @@
 A collaborative **Learning Management System (LMS)** web project built by **Zeeshan**, **Aiza**, and **Ethsham** to practice and polish our **web development skills** for the upcoming competition.  
 
 This project focuses on **frontend and backend integration**, **user authentication**, and **course management** features.
-
 ---
 ## Our Goals
 - Strengthen our **HTML, CSS, JavaScript** skills  
