@@ -6,8 +6,8 @@ This project focuses on **frontend and backend integration**, **user authenticat
 ---
 ## Our Goals
 - Strengthen our **HTML, CSS, JavaScript** skills  
-- Implement **PHP / Node.js** for backend logic  
-- Use **MySQL / MSSQL** for database management  
+- Implement **Node.js+Express** for backend logic  
+- Use **MSSQL** for database management  
 - Learn to **collaborate using Git & GitHub** effectively  
 - Create a **fully functional LMS website** before the competition  
 
@@ -24,9 +24,9 @@ This project focuses on **frontend and backend integration**, **user authenticat
 
 ## Tech Stack
 **Frontend:** HTML, CSS, JavaScript, Bootstrap  
-**Backend:** PHP or Node.js  
-**Database:** MySQL / MSSQL  
-**Tools:** VS Code, XAMPP / Docker, GitHub  
+**Backend:** Node.js+Express  
+**Database:** MSSQL  
+**Tools:** VS Code, / Docker, GitHub  
 
 ---
 
