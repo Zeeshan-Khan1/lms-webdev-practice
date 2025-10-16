@@ -1,92 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      background-color: #f5f5f5;
-      margin-bottom: 80px; /* Space for sticky footer */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #dbdce2 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+}
+
+.teacher-info {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.teacher-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.courses {
+    padding: 20px;
+}
+
+.courses h3 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f8f9ff;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.course-item:hover {
+    background: #e8ecff;
+    transform: translateX(2px);
+}
+
+.course-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background: #667eea;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+.course-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.create-attendance-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.create-attendance-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.greeting {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Attendance Section */
+.attendance-section {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.attendance-section.show {
+    display: block;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.attendance-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.attendance-header h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.attendance-date {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.student-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+    transition: all 0.3s ease;
+}
+
+.student-item:hover {
+    background: #e9ecef;
+}
+
+.student-checkbox {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.student-name {
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+}
+
+.success-message {
+    display: none;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-message.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
-
+    
     .sidebar {
-      background-color: #ffffff;
-      min-height: 100vh;
-      padding: 20px 10px;
-      border-right: 1px solid #eee;
+        width: 100%;
+        order: 2;
     }
-
-.logo-1 {
-  max-width:100%;
-  height:auto;
-  width:80px;
-  border-radius: 10px;
-  border: 2px solid #ddd; 
-  /* optional, for a clean frame */
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .greeting {
+        font-size: 1.5em;
+    }
 }
-
-.user-info h5 {
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.user-info small {
-  color: #777;
-  font-size: 0.9rem;
-}
-   .sidebar .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #333;
-    }
-
-    .sidebar .nav-link:hover {
-      background-color: #f0f0f0;
-      border-radius: 6px;
-    }
-
-    .card-custom {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      height: 100%;
-    }
-
-    .topbar {
-      background-color: #ffffff;
-      padding: 15px 30px;
-      margin-bottom: 15px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
-
-    .footer-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #1c1c2c;
-      color: white;
-      padding: 10px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .footer-bar button {
-      background-color: #ffffff;
-      color: #1c1c2c;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 600;
-    }
-
-    .project-dot {
-      width: 10px;
-      height: 10px;
-      display: inline-block;
-      border-radius: 50%;
-      margin-right: 6px;
-    }
-
-    .offcanvas-start {
-      width: 250px;
-    }
