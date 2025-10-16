@@ -11,7 +11,6 @@ const students = [
     'Mubashir Ali',
     'Nadia Shah'
 ];
-
 // Show current date when page loads
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('attendanceDate').textContent = 
