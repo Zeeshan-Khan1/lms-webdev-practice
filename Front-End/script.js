@@ -1,68 +1,25 @@
-// Dummy student data
-const students = [
-    'Ali Ahmed',
-    'Aiza Khan',
-    'Ehtsham Malik',
-    'Fatima Riaz',
-    'Hassan Ali',
-    'Iqra Bibi',
-    'Jawad Khan',
-    'Kiran Fatima',
-    'Mubashir Ali',
-    'Nadia Shah'
-];
-// Show current date when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('attendanceDate').textContent = 
-        new Date().toLocaleDateString('en-US', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        });
+// Set current time as default lecture time
+document.addEventListener('DOMContentLoaded', () => {
+    const now = new Date();
+    const timeStr = now.toTimeString().slice(0, 5); // HH:MM
+    document.getElementById('timeInput').value = timeStr;
 });
 
-function showAttendance() {
-    const section = document.getElementById('attendanceSection');
-    section.classList.add('show');
-    
-    // Generate student list
-    const studentList = document.getElementById('studentList');
-    studentList.innerHTML = '';
-    
-    students.forEach((student, index) => {
-        const studentItem = document.createElement('div');
-        studentItem.className = 'student-item';
-        studentItem.innerHTML = `
-            <input type="checkbox" class="student-checkbox" id="student${index}" checked>
-            <label for="student${index}" class="student-name">${student}</label>
-        `;
-        studentList.appendChild(studentItem);
-    });
-    
-    // Scroll to attendance section
-    section.scrollIntoView({ behavior: 'smooth' });
-}
+function createLecture() {
+    const course = document.getElementById('courseSelect').value;
+    const type   = document.getElementById('typeSelect').value;
+    const time   = document.getElementById('timeInput').value;
+    const room   = document.getElementById('roomSelect').value;
 
-function saveAttendance() {
-    const checkboxes = document.querySelectorAll('.student-checkbox');
-    let presentCount = 0;
-    
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked) presentCount++;
-    });
-    
-    // Show success message
-    const successMsg = document.getElementById('successMessage');
-    successMsg.classList.add('show');
-    
-    // Hide success message after 3 seconds
-    setTimeout(() => {
-        successMsg.classList.remove('show');
-    }, 3000);
-    
-    // Hide attendance section after 2 seconds
-    setTimeout(() => {
-        document.getElementById('attendanceSection').classList.remove('show');
-    }, 2000);
+    if (!course || !room) {
+        alert('Please select a course and a room.');
+        return;
+    }
+
+    // Store data in localStorage for the attendance page
+    const lectureData = { course, type, time, room };
+    localStorage.setItem('lectureData', JSON.stringify(lectureData));
+
+    // Navigate to attendance page
+    window.location.href = 'attendance.html';
 }

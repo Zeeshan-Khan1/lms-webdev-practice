@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="attendance-page">
+        <header class="page-header">
+            <h1>Today's Attendance</h1>
+            <div id="courseInfo"></div>
+            <div id="dateInfo"></div>
+        </header>
+
+        <table class="attendance-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Present</th>
+                </tr>
+            </thead>
+            <tbody id="studentBody">
+                <!-- Filled by JS -->
+            </tbody>
+        </table>
+
+        <button class="save-btn" onclick="saveAttendance()">Save Attendance</button>
+        <div class="success-msg" id="successMsg">Attendance saved successfully!</div>
+
+        <button class="back-btn" onclick="window.location.href='index.html'">Back to Dashboard</button>
+    </div>
+
+    <script src="attendance-script.js"></script>
+</body>
+</html>
