@@ -11,7 +11,6 @@ const students = [
     { name: 'Mubashir', roll: '09' },
     { name: 'Nadia', roll: '10' }
 ];
-
 document.addEventListener('DOMContentLoaded', () => {
     // Retrieve lecture data
     const data = JSON.parse(localStorage.getItem('lectureData')) || {};
