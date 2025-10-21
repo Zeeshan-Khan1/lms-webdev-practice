@@ -1,8 +1,15 @@
+// here the code for the courses started
 // Set current time as default lecture time
 document.addEventListener('DOMContentLoaded', () => {
-    const now = new Date();
-    const timeStr = now.toTimeString().slice(0, 5); // HH:MM
-    document.getElementById('timeInput').value = timeStr;
+  const page = window.location.pathname.split("/").pop();
+
+  // Check if it's courses.html
+  if (page === "courses.html") {
+    console.log("You are on the Courses page!");
+  }
+  const now = new Date();
+  const timeStr = now.toTimeString().slice(0, 5); // HH:MM
+  document.getElementById('timeInput').value = timeStr;
 });
 
 function createLecture() {
