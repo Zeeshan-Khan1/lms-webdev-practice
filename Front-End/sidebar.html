@@ -1,0 +1,94 @@
+    <!-- Row 2: Sidebar + Main -->
+    <div class="row"> <!-- Sidebar for desktop -->
+        <div class="col-md-10 d-none d-md-block sidebar"> <!-- Icons with tooltips -->
+            <ul class="nav flex-column mb-4">
+                <li class="nav-item" title="Dashboard"> 
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-house-door text-primary"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item" title="Schedule"> 
+                    <a class="nav-link" href="schedule.html">
+                        <i class="bi bi-calendar-week text-info"></i> Schedule
+                    </a>
+                </li>
+                <li class="nav-item" title="Courses"> 
+                    <a class="nav-link" href="courses.html">
+                        <i class="bi bi-book text-success"></i> Courses
+                    </a>
+                </li>
+                <li class="nav-item" title="Marks">
+                    <a class="nav-link" href="marks.html">
+                        <i class="bi bi-graph-up text-danger"></i> Marks
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Quick Actions -->
+            <hr class="my-3">
+            <h6 class="text-muted">Quick Actions</h6>
+            <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary btn-sm" onclick="window.location.href='courses.html'">
+                    <i class="bi bi-plus-circle"></i> New Lecture
+                </button>
+                <button class="btn btn-outline-success btn-sm" onclick="window.location.href='attendance.html'">
+                    <i class="bi bi-clipboard-check"></i> Take Attendance
+                </button>
+            </div>
+            
+            <!-- Today's Classes -->
+            <hr class="my-3">
+            <h6 class="text-muted">Today's Classes</h6>
+            <div class="small">
+                <div class="d-flex justify-content-between">
+                    <span>Web Technologies</span>
+                    <span class="text-muted">10:00 AM</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Database Systems</span>
+                    <span class="text-muted">2:00 PM</span>
+                </div>
+            </div>
+        </div> <!-- Sidebar for mobile (offcanvas) -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Teacher Menu</h5> 
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body sidebar">
+                <ul class="nav flex-column mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">
+                            <i class="bi bi-calendar-week"></i> Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">
+                            <i class="bi bi-book"></i> Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="marks.html">
+                            <i class="bi bi-graph-up"></i> Marks
+                        </a>
+                    </li>
+                </ul>
+                
+                <hr class="my-3">
+                <h6 class="text-muted">Quick Actions</h6>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary btn-sm" onclick="window.location.href='courses.html'">
+                        <i class="bi bi-plus-circle"></i> New Lecture
+                    </button>
+                    <button class="btn btn-outline-success btn-sm" onclick="window.location.href='attendance.html'">
+                        <i class="bi bi-clipboard-check"></i> Take Attendance
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
