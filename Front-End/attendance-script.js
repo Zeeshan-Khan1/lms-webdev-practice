@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.appendChild(tr);
     });
 });
-
 function saveAttendance() {
     // In a real app you would send data to a server.
     // Here we just show a success message.
