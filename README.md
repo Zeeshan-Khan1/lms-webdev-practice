@@ -11,7 +11,6 @@ This project focuses on **frontend and backend integration**, **user authenticat
 - Create a **fully functional LMS website** before the competition  
 
 ---
-
 ##  Project Features (Planned)
 -  Admin Dashboard  
 -  Student Registration & Login  
