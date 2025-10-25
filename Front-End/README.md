@@ -75,7 +75,6 @@ This project uses relative paths and standard web technologies, making it compat
 - Edge
 
 ## Notes
-
 - All pages are self-contained and can be opened individually
 - The project uses Bootstrap for responsive design
 - Data is stored in localStorage for persistence
