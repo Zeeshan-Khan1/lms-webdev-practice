@@ -2,7 +2,7 @@
 
 A simple Learning Management System built with HTML, CSS, and JavaScript.
 
-## Features
+## Features:
 
 - **Dashboard**: Overview of courses and learning paths
 - **Courses**: Create and manage lectures
