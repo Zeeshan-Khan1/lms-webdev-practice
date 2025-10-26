@@ -7,7 +7,6 @@ function loadHTML(id, file, callback) {
     })
     .catch(err => console.error('Error loading', file, err));
 }
-
 // Load layout sections
 loadHTML("header", "header.html");
 loadHTML("sidebar", "sidebar.html");
