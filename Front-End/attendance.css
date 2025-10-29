@@ -93,7 +93,8 @@
 /* Responsive */
 @media (max-width: 480px) {
     .dashboard, .attendance-page {
-        padding: 20px;
         margin: 20px
+        padding: 20px;
+
     }
 }
