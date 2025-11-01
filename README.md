@@ -17,7 +17,6 @@ This project focuses on **frontend and backend integration**, **user authenticat
 -  Course Creation and Enrollment  
 -  Assignment Uploads & Grading  
 -  Progress Tracking  
-
 ---
 
 ## Tech Stack
